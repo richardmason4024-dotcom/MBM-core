@@ -1,0 +1,43 @@
+{
+  "model_version": "1.0.0",
+  "last_updated": "2026-04-01T00:00:00Z",
+  "description": "MBM Core Sigmoid and Weighting Constants",
+
+  "sigmoids": {
+    "star_power": {
+      "metric": "kill_share_pct",
+      "x0": 0.18,
+      "k": 50
+    },
+    "consistency": {
+      "metric": "stability_score_raw",
+      "x0": 80.0,
+      "k": 0.2
+    },
+    "eco_fragility": {
+      "metric": "eco_dependency_raw",
+      "x0": 0.30,
+      "k": 15
+    },
+    "aggression": {
+      "metric": "opening_duel_rate",
+      "x0": 0.20,
+      "k": 30
+    }
+  },
+
+  "weights": {
+    "overlean": {
+      "star_power": 0.35,
+      "consistency": 0.30,
+      "eco_safety": 0.20,
+      "aggression": 0.15
+    },
+    "underlean": {
+      "low_star": 0.40,
+      "consistency": 0.25,
+      "eco_risk": 0.20,
+      "low_aggression": 0.15
+    }
+  }
+}
